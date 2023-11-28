@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:tubes_rpl_update/widget_library/navbar.dart';
+import 'package:tubes_rpl_update/home.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(theme: ThemeData(fontFamily: 'Rubik'), home: const NavBar());
+    return const MaterialApp(
+      home: Home(),
+    );
   }
 }
