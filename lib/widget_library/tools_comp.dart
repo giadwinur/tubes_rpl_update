@@ -2,11 +2,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ToolsComp extends StatelessWidget {
-  String judul;
-  String subJudul;
-  Widget ontap;
-  IconData icon;
-
   ToolsComp({
     Key? key,
     this.judul = '',
@@ -14,6 +9,11 @@ class ToolsComp extends StatelessWidget {
     required this.ontap,
     required this.icon,
   }) : super(key: key);
+
+  IconData icon;
+  String judul;
+  Widget ontap;
+  String subJudul;
 
   @override
   Widget build(BuildContext context) {

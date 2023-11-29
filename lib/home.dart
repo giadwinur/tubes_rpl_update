@@ -4,7 +4,6 @@ import 'package:tubes_rpl_update/dashboard/artikel/info_stunting.dart';
 import 'package:tubes_rpl_update/dashboard/artikel/pencegahan.dart';
 import 'package:tubes_rpl_update/dashboard/artikel/penyebab.dart';
 import 'package:tubes_rpl_update/dashboard/gizi/gizi.dart';
-import 'package:tubes_rpl_update/dashboard/gizi/home_gizi.dart';
 import 'package:tubes_rpl_update/dashboard/judul/text.dart';
 import 'package:tubes_rpl_update/widget_library/artikel_comp.dart';
 import 'package:tubes_rpl_update/widget_library/cekstun.dart';
@@ -38,31 +37,15 @@ class Home extends StatelessWidget {
               height: 230,
               width: width,
               decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/images/Frame.jpg'),
-                ),
+                image: DecorationImage(image: AssetImage('assets/images/Frame.jpg'), fit: BoxFit.cover),
               ),
               child: const JudulText(),
             ),
-            Align(
-                alignment: Alignment.bottomLeft,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const SubJudul(subjudul: 'Tinggi Protein'),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeGizi()));
-                      },
-                      child: const Text('See all'),
-                    )
-                  ],
-                )),
-            const GiziProtein(),
+            const GiziBeranda(),
+            const Align(alignment: Alignment.bottomLeft, child: SubJudul(subjudul: 'Cekstun Tools')),
+            const CekStun(),
             const Align(alignment: Alignment.bottomLeft, child: SubJudul(subjudul: 'Berita')),
             const NewsComp(),
-            const Align(alignment: Alignment.bottomLeft, child: SubJudul(subjudul: 'Cekstun')),
-            const CekStun(),
             const Align(alignment: Alignment.bottomLeft, child: SubJudul(subjudul: 'Artikel')),
             const ArtikelComp(
                 ontap: InfoStunting(),

@@ -22,10 +22,9 @@ class CompNews extends StatelessWidget {
           throw Exception('Could not launch $url');
         }
       },
-      child: Container(
+      child: SizedBox(
         width: width,
         height: 158,
-        color: Colors.pink,
         child: Image.asset(
           image,
           fit: BoxFit.cover,

@@ -2,31 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:tubes_rpl_update/widget_library/gizi_component.dart';
 import 'package:tubes_rpl_update/widget_library/sub_judul.dart';
 
-class KalsiumClass extends StatelessWidget {
-  const KalsiumClass({super.key});
+class ZatGizi extends StatelessWidget {
+  const ZatGizi({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SubJudul(subjudul: 'Tinggi Kalsium'),
+        SubJudul(subjudul: 'Mengandung Zat Gizi'),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              GiziComp(image: 'assets/images/keju.jpeg', text: 'Keju'),
+              GiziComp(image: 'assets/images/nasi.jpg', text: 'Nasi'),
               SizedBox(width: 30),
-              GiziComp(image: 'assets/images/bayam.jpg', text: 'Bayam'),
+              GiziComp(image: 'assets/images/sapi.jpg', text: 'Sapi'),
               SizedBox(width: 30),
-              GiziComp(image: 'assets/images/alpukat.jpg', text: 'Alpukat'),
+              GiziComp(image: 'assets/images/tahu.jpg', text: 'Tahu'),
               SizedBox(width: 30),
-              GiziComp(image: 'assets/images/jeruk.jpeg', text: 'Jeruk'),
+              GiziComp(image: 'assets/images/brokoli.jpg', text: 'Brokoli'),
               SizedBox(width: 30),
-              GiziComp(image: 'assets/images/salmon.jpg', text: 'Salmon'),
+              GiziComp(image: 'assets/images/tuna.jpg', text: 'Tuna'),
               SizedBox(width: 30),
-              GiziComp(image: 'assets/images/oatmeal.jpg', text: 'Oatmeal'),
+              GiziComp(image: 'assets/images/kismis.jpg', text: 'Kismis'),
             ],
           ),
         ),
@@ -37,7 +37,7 @@ class KalsiumClass extends StatelessWidget {
         Padding(
             padding: EdgeInsets.only(left: 20, right: 20),
             child: Text(
-                '⚈   Keju mengandung sekitar 721 mg / 100 gram \n⚈   Bayam mengandung  99 mg / 100 gram,\n⚈   Alpukat mengandung 10,00 mg / 100 gram\n⚈   Jeruk memiliki 40 mg / 100 gram.\n⚈   Salmon mengandung 9 mg / 100 gram\n⚈   OatMeal mencapai 80 mg  / 100  gram')),
+                '⚈   Nasi Putih mengandung sekitar 7,97 zat besi \n⚈   Daging Sapi mengandung  5,24 miligram / 85 gram\n⚈   Tahu mengandung 3 miligram zat besi\n⚈   Brokoli memiliki 0.75 miligram / 100 gram\n⚈   Tuna mengandung 2,52 miligram / 165 gram\n⚈   Kismis mencapai 1,9 miligram  / 100  gram')),
       ],
     );
   }

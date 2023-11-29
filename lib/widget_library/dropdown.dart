@@ -35,7 +35,7 @@ class DropController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 
   final screens = [
-    const GiziProtein(),
+    const GiziBeranda(),
     const GiziKalsium(),
     const GiziKalori(),
   ];
