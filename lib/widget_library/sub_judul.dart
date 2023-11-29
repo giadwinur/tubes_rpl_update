@@ -10,7 +10,7 @@ class SubJudul extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       child: Text(
         subjudul,
-        style: const TextStyle(fontSize: 12),
+        style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
       ),
     );
   }

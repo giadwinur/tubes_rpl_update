@@ -60,8 +60,8 @@ class _NewsCompState extends State<NewsComp> {
         activeIndex: activeIndex,
         count: imageAsset.length,
         effect: const JumpingDotEffect(
-          dotWidth: 10,
-          dotHeight: 10,
+          dotWidth: 7,
+          dotHeight: 7,
           dotColor: Colors.grey,
         ),
       );

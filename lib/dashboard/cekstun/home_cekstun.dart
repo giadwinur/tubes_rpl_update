@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tubes_rpl_update/dashboard/cekstun/akg.dart';
-import 'package:tubes_rpl_update/dashboard/cekstun/imt.dart';
-import 'package:tubes_rpl_update/dashboard/cekstun/z_score.dart';
+import 'package:tubes_rpl_update/dashboard/cekstun/akg/akg.dart';
+import 'package:tubes_rpl_update/dashboard/cekstun/imt/imt.dart';
+import 'package:tubes_rpl_update/dashboard/cekstun/z_score/data_zscore.dart';
+import 'package:tubes_rpl_update/dashboard/cekstun/z_score/z_score.dart';
 import 'package:tubes_rpl_update/widget_library/bar.dart';
 import 'package:tubes_rpl_update/widget_library/tools_comp.dart';
 
@@ -29,7 +30,7 @@ class HomeTools extends StatelessWidget {
               subJudul: 'ukur index masa tubuh kamu agar\ntahu status gizi tubuhnya normal atau tidak',
             ),
             ToolsComp(
-              ontap: const HitungZscore(),
+              ontap: HitungZscore(calculator: dataZscore.calculator),
               icon: Icons.child_care,
               judul: 'Kalkulator z-score',
               subJudul: 'hitung status gizi anak kamu agar mengetahui\nindex pertumbuhannya normal atau tidak',

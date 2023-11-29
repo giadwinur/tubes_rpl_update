@@ -32,7 +32,7 @@ class ArtikelComp extends StatelessWidget {
                     Text(
                       judulArtikel,
                       style: const TextStyle(
-                          fontSize: 15, color: Color.fromARGB(144, 38, 59, 142), fontWeight: FontWeight.bold),
+                          fontSize: 15, color: Color.fromRGBO(106, 129, 222, 1), fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 7),
                     Text(

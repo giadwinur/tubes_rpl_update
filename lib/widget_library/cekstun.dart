@@ -1,9 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import 'package:tubes_rpl_update/dashboard/cekstun/akg.dart';
-import 'package:tubes_rpl_update/dashboard/cekstun/z_score.dart';
+import 'package:tubes_rpl_update/dashboard/cekstun/akg/akg.dart';
+import 'package:tubes_rpl_update/dashboard/cekstun/imt/imt.dart';
+import 'package:tubes_rpl_update/dashboard/cekstun/z_score/data_zscore.dart';
+import 'package:tubes_rpl_update/dashboard/cekstun/z_score/z_score.dart';
 
 class CekStun extends StatefulWidget {
   const CekStun({super.key});
@@ -17,17 +18,17 @@ class _CekStunState extends State<CekStun> {
   final imageAsset = [
     'assets/images/akg.png',
     'assets/images/z-score.png',
-    // 'assets/images/imt.png',
+    'assets/images/index.png',
   ];
   final text = [
     'Hitung Angka\nKebutuhan\nGizi (AKG)',
     'Cek Status\nGizi Anak\nZ-Score',
-    // 'Cek Index\nMasa Tubuh\n(IMT)',
+    'Cek Index\nMasa Tubuh\n(IMT)',
   ];
   final ontap = [
     const HitungAkg(),
-    const HitungZscore(),
-    // const HitungImt(),
+    HitungZscore(calculator: dataZscore.calculator),
+    const HitungImt(),
   ];
 
   @override
@@ -47,29 +48,18 @@ class _CekStunState extends State<CekStun> {
             enableInfiniteScroll: false,
             enlargeCenterPage: true,
             enlargeStrategy: CenterPageEnlargeStrategy.height,
-            height: 170,
+            height: 180,
             autoPlay: true,
             pageSnapping: false,
             onPageChanged: (index, reason) => setState(() => activeIndex = index),
             reverse: true,
-            autoPlayInterval: const Duration(seconds: 2),
+            autoPlayInterval: const Duration(seconds: 3),
           ),
         ),
         const SizedBox(height: 20),
-        buildIndicator()
       ],
     );
   }
-
-  Widget buildIndicator() => AnimatedSmoothIndicator(
-        activeIndex: activeIndex,
-        count: imageAsset.length,
-        effect: const JumpingDotEffect(
-          dotWidth: 9,
-          dotHeight: 9,
-          dotColor: Colors.grey,
-        ),
-      );
 
   Widget buildImage(
     String imageAssets,
@@ -87,10 +77,19 @@ class _CekStunState extends State<CekStun> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Padding(padding: const EdgeInsets.only(left: 20), child: Text(text)),
-            Image.asset(
-              imageAssets,
-              fit: BoxFit.fill,
+            Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text(
+                  text,
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                )),
+            SizedBox(
+              height: 180,
+              // width: 150,
+              child: Image.asset(
+                imageAssets,
+                fit: BoxFit.fitHeight,
+              ),
             ),
           ],
         ),
