@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "29924222977",
+    "project_id": "rpl-uas-21900",
+    "storage_bucket": "rpl-uas-21900.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29924222977:android:d97c595e2ff5385b27f800",
+        "android_client_info": {
+          "package_name": "com.example.tubes_rpl_update"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCORy_CfzmbU_xhAGG4WXOvzZuFBrIIWRA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
