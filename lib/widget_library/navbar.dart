@@ -15,6 +15,8 @@ class NavBar extends StatelessWidget {
     return Scaffold(
         bottomNavigationBar: Obx(
           () => NavigationBar(
+            shadowColor: Colors.black,
+            indicatorColor: Color.fromARGB(255, 204, 212, 253),
             height: 60,
             elevation: 0,
             selectedIndex: controller.selectedIndex.value,
@@ -38,7 +40,7 @@ class NavBar extends StatelessWidget {
               ),
               NavigationDestination(
                 icon: Icon(Icons.health_and_safety),
-                label: "Gizi",
+                label: "Nutrisi",
               ),
             ],
           ),

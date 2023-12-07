@@ -15,7 +15,7 @@ class HomeGizi extends StatelessWidget {
         appBar: PreferredSize(
           preferredSize: Size(width, 40),
           child: Bar(
-            title: 'Informasi Gizi',
+            title: 'Informasi Nutrisi',
           ),
         ),
         body: SingleChildScrollView(

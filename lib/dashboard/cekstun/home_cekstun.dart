@@ -25,19 +25,16 @@ class HomeTools extends StatelessWidget {
           children: [
             ToolsComp(
               ontap: const HitungImt(),
-              icon: Icons.accessibility,
               judul: 'Kalkulator IMT',
               subJudul: 'ukur index masa tubuh kamu agar\ntahu status gizi tubuhnya normal atau tidak',
             ),
             ToolsComp(
               ontap: HitungZscore(calculator: dataZscore.calculator),
-              icon: Icons.child_care,
               judul: 'Kalkulator z-score',
               subJudul: 'hitung status gizi anak kamu agar mengetahui\nindex pertumbuhannya normal atau tidak',
             ),
             ToolsComp(
               ontap: const HitungAkg(),
-              icon: Icons.fastfood,
               judul: 'Kalkulator AKG',
               subJudul: 'ukur index masa tubuh kamu agar\ntahu status gizi tubuhnya normal atau tidak',
             ),

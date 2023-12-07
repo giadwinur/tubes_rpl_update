@@ -41,14 +41,14 @@ dependencies:
   #* --- firebase ---
   # firebase_core_desktop: ^1.0.2
   # firebase_auth_desktop: ^1.0.2
-  firebase_core: ^2.13.0
+  firebase_core: ^2.24.0
   firebase_auth: ^4.6.1
-  firebase_app_check: ^0.1.4+2
+  firebase_app_check: ^0.2.1+6
   firebase_analytics: ^10.4.0
-  firebase_messaging: ^14.6.0
+  firebase_messaging: ^14.7.6
   firebase_in_app_messaging: ^0.7.3
   firebase_database: ^10.2.0
-  cloud_firestore: ^4.8.0
+  cloud_firestore: ^4.13.3
   google_sign_in: ^6.1.0
   firebase_storage: ^11.2.0
   #*  --- firebase mock ---
@@ -99,6 +99,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.13.1"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/icon.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

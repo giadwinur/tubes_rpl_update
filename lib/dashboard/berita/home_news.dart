@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:states_rebuilder/scr/state_management/listeners/on_reactive.dart';
 import 'package:states_rebuilder/scr/state_management/rm.dart';
-import 'package:tubes_rpl_update/be/ctrl.dart';
-import 'package:tubes_rpl_update/be/data.dart';
+import 'package:tubes_rpl_update/backend_berita/data.dart';
 import 'package:tubes_rpl_update/config/xtras.dart';
 import 'package:tubes_rpl_update/widget_library/bar.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -42,19 +41,15 @@ class HomeNews extends StatelessWidget {
                                 throw Exception('Could not launch $url');
                               }
                             },
-                            child: Column(
-                              children: [
-                                Text(dt.rxProductList.st[index].judul),
-                                Container(
-                                  margin: const EdgeInsets.all(5),
-                                  height: 200,
-                                  color: Colors.amber,
-                                  child: Image.network(
-                                    dt.rxProductList.st[index].image,
-                                    fit: BoxFit.contain,
-                                  ),
-                                ),
-                              ],
+                            child: Container(
+                              margin: const EdgeInsets.all(5),
+                              height: 200,
+                              width: double.infinity,
+                              color: Colors.grey.shade300,
+                              child: Image.network(
+                                dt.rxProductList.st[index].image,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                         ),
@@ -76,34 +71,6 @@ class HomeNews extends StatelessWidget {
                       // ),
                     ],
                   ),
-                ))
-
-        // SingleChildScrollView(
-        //   child: Column(
-        //     children: [
-        //       CompNews(
-        //         image: 'assets/images/news1.png',
-        //         link: 'https://humbanghasundutankab.go.id/main/index.php/read/news/828',
-        //       ),
-        //       const SizedBox(height: 20),
-        //       CompNews(
-        //         image: 'assets/images/news2.png',
-        //         link: 'https://dppkbpppa.pontianak.go.id/informasi/berita/ciri-ciri-anak-mengalami-stunting828',
-        //       ),
-        //       const SizedBox(height: 20),
-        //       CompNews(
-        //         image: 'assets/images/news3.png',
-        //         link:
-        //             'https://paudpedia.kemdikbud.go.id/berita/149-juta-anak-di-dunia-alami-stunting-sebanyak-63-juta-di-indonesia-wapres-minta-keluarga-prioritaskan-kebutuhan-gizi?do=MTY2NC01YjRhOGZkNA==&ix=MTEtYmJkNjQ3YzA=',
-        //       ),
-        //       const SizedBox(height: 20),
-        //       CompNews(
-        //         image: 'assets/images/news4.png',
-        //         link: 'https://www.siloamhospitals.com/informasi-siloam/artikel/apa-itu-stunting',
-        //       ),
-        //     ],
-        //   ),
-        // ),
-        );
+                )));
   }
 }

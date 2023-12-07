@@ -1,31 +1,31 @@
 import 'dart:convert';
 
 class ModelsBerita {
+  String createdAt;
+  String ontap;
   String image;
   String judul;
-  String ontap;
-  String createdAt;
   String id;
   ModelsBerita({
+    this.createdAt = '',
+    this.ontap = '',
     this.image = '',
     this.judul = '',
-    this.ontap = '',
-    this.createdAt = '',
     this.id = '',
   });
 
   ModelsBerita copyWith({
+    String? createdAt,
+    String? ontap,
     String? image,
     String? judul,
-    String? ontap,
-    String? createdAt,
     String? id,
   }) {
     return ModelsBerita(
+      createdAt: createdAt ?? this.createdAt,
+      ontap: ontap ?? this.ontap,
       image: image ?? this.image,
       judul: judul ?? this.judul,
-      ontap: ontap ?? this.ontap,
-      createdAt: createdAt ?? this.createdAt,
       id: id ?? this.id,
     );
   }
@@ -33,10 +33,10 @@ class ModelsBerita {
   Map<String, dynamic> toMap() {
     final result = <String, dynamic>{};
 
+    result.addAll({'created_at': createdAt});
+    result.addAll({'ontap': ontap});
     result.addAll({'image': image});
     result.addAll({'judul': judul});
-    result.addAll({'ontap': ontap});
-    result.addAll({'created_at': createdAt});
     result.addAll({'id': id});
 
     return result;
@@ -44,10 +44,10 @@ class ModelsBerita {
 
   factory ModelsBerita.fromMap(Map<String, dynamic> map) {
     return ModelsBerita(
+      createdAt: map['created_at'] ?? '',
+      ontap: map['ontap'] ?? '',
       image: map['image'] ?? '',
       judul: map['judul'] ?? '',
-      ontap: map['ontap'] ?? '',
-      createdAt: map['created_at'] ?? '',
       id: map['id'] ?? '',
     );
   }
@@ -58,7 +58,7 @@ class ModelsBerita {
 
   @override
   String toString() {
-    return 'ModelsBerita(image: $image, judul: $judul, ontap: $ontap, createdAt: $createdAt, id: $id)';
+    return 'ModelsBerita(createdAt: $createdAt, ontap: $ontap, image: $image, judul: $judul, id: $id)';
   }
 
   @override
@@ -66,15 +66,15 @@ class ModelsBerita {
     if (identical(this, other)) return true;
 
     return other is ModelsBerita &&
+        other.createdAt == createdAt &&
+        other.ontap == ontap &&
         other.image == image &&
         other.judul == judul &&
-        other.ontap == ontap &&
-        other.createdAt == createdAt &&
         other.id == id;
   }
 
   @override
   int get hashCode {
-    return image.hashCode ^ judul.hashCode ^ ontap.hashCode ^ createdAt.hashCode ^ id.hashCode;
+    return createdAt.hashCode ^ ontap.hashCode ^ image.hashCode ^ judul.hashCode ^ id.hashCode;
   }
 }

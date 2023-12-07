@@ -17,33 +17,30 @@ class FormHitung extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 30, right: 30),
-      child: TextFormField(
-        validator: (String? value) {
-          if (value == null || value.isEmpty) {
-            return "password required";
-          }
-          return null;
-        },
-        controller: controller,
-        autofocus: false,
-        keyboardType: keyboard,
-        // obscureText: _passVisibility,
-        decoration: InputDecoration(
-          hintText: hintText,
-          hintStyle: const TextStyle(color: Colors.black),
-          hoverColor: Colors.grey,
-          labelText: labelText,
-          labelStyle: const TextStyle(color: Colors.black),
-          enabledBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.black),
-          ),
-          focusedBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.black),
-          ),
+    return TextFormField(
+      validator: (String? value) {
+        if (value == null || value.isEmpty) {
+          return "password required";
+        }
+        return null;
+      },
+      controller: controller,
+      autofocus: false,
+      keyboardType: keyboard,
+      // obscureText: _passVisibility,
+      decoration: InputDecoration(
+        hintText: hintText,
+        hintStyle: const TextStyle(color: Colors.black),
+        hoverColor: Colors.grey,
+        labelText: labelText,
+        labelStyle: const TextStyle(color: Colors.black),
+        enabledBorder: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+          borderSide: BorderSide(color: Colors.black),
+        ),
+        focusedBorder: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+          borderSide: BorderSide(color: Colors.black),
         ),
       ),
     );

@@ -7,10 +7,8 @@ class ToolsComp extends StatelessWidget {
     this.judul = '',
     this.subJudul = '',
     required this.ontap,
-    required this.icon,
   }) : super(key: key);
 
-  IconData icon;
   String judul;
   Widget ontap;
   String subJudul;
@@ -35,10 +33,6 @@ class ToolsComp extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Icon(
-              icon,
-              color: const Color.fromARGB(144, 38, 59, 142),
-            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,

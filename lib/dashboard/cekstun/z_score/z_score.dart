@@ -28,71 +28,77 @@ class _HitungZscoreState extends State<HitungZscore> {
           title: 'Hitung Z-SCORE',
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          FormHitung(
-              controller: dataZscore.usiaController,
-              keyboard: TextInputType.number,
-              hintText: 'Usia (bulan)',
-              labelText: 'Masukan Usia Anak (bulan)'),
-          const SizedBox(height: 20),
-          Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: Row(
-              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                const SubJudul(subjudul: 'Jenis Kelamin'),
-                DropdownButton<String>(
-                  value: dataZscore.selectedJenisKelamin,
-                  onChanged: (String? newValue) {
-                    setState(() {
-                      dataZscore.selectedJenisKelamin = newValue!;
-                    });
-                  },
-                  items: <String>['L', 'P'].map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Text(value),
-                    );
-                  }).toList(),
+      body: Container(
+        padding: EdgeInsets.only(right: 30, left: 30, top: 0, bottom: 30),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 70),
+              FormHitung(
+                  controller: dataZscore.usiaController,
+                  keyboard: TextInputType.number,
+                  hintText: 'Usia (bulan)',
+                  labelText: 'Masukan Usia Anak (bulan)'),
+              const SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Row(
+                  // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    const SubJudul(subjudul: 'Jenis Kelamin'),
+                    DropdownButton<String>(
+                      value: dataZscore.selectedJenisKelamin,
+                      onChanged: (String? newValue) {
+                        setState(() {
+                          dataZscore.selectedJenisKelamin = newValue!;
+                        });
+                      },
+                      items: <String>['L', 'P'].map<DropdownMenuItem<String>>((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      }).toList(),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+              const SizedBox(height: 20),
+              FormHitung(
+                  controller: dataZscore.beratBadanController,
+                  keyboard: TextInputType.number,
+                  hintText: 'Berat Badan (kg)',
+                  labelText: 'Masukan Berat Badan (kg)'),
+              const SizedBox(height: 20),
+              FormHitung(
+                  controller: dataZscore.tinggiBadanController,
+                  keyboard: TextInputType.number,
+                  hintText: 'Tinggi Badan (cm)',
+                  labelText: 'Masukan Tinggi Badan (cm)'),
+              const SizedBox(height: 20),
+              FormHitung(
+                  controller: dataZscore.imtController,
+                  keyboard: TextInputType.number,
+                  hintText: 'Indeks masa tubuh (IMT)',
+                  labelText: 'Masukan Indeks Masa Tubuh (IMT)'),
+              const SizedBox(height: 20),
+              Hitung(
+                onpressedHitung: () {
+                  navigateToResultPage(context);
+
+                  debugPrint(' Print dari Hitung');
+                },
+                onpressedReset: () {
+                  resetForm();
+
+                  debugPrint(' Print dari reset');
+                },
+              )
+            ],
           ),
-          const SizedBox(height: 20),
-          FormHitung(
-              controller: dataZscore.beratBadanController,
-              keyboard: TextInputType.number,
-              hintText: 'Berat Badan (kg)',
-              labelText: 'Masukan Berat Badan (kg)'),
-          const SizedBox(height: 20),
-          FormHitung(
-              controller: dataZscore.tinggiBadanController,
-              keyboard: TextInputType.number,
-              hintText: 'Tinggi Badan (cm)',
-              labelText: 'Masukan Tinggi Badan (cm)'),
-          const SizedBox(height: 20),
-          FormHitung(
-              controller: dataZscore.imtController,
-              keyboard: TextInputType.number,
-              hintText: 'Indeks masa tubuh (IMT)',
-              labelText: 'Masukan Indeks Masa Tubuh (IMT)'),
-          const SizedBox(height: 20),
-          Hitung(
-            onpressedHitung: () {
-              navigateToResultPage(context);
-
-              debugPrint(' Print dari Hitung');
-            },
-            onpressedReset: () {
-              resetForm();
-
-              debugPrint(' Print dari reset');
-            },
-          )
-        ],
+        ),
       ),
     );
   }

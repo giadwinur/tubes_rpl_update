@@ -45,6 +45,8 @@ android {
         applicationId "com.example.tubes_rpl_update"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
+        multiDexEnabled true
+        minSdkVersion 19
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
@@ -64,4 +66,9 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation platform('com.google.firebase:firebase-bom:31.3.0')
+    implementation 'com.android.support:multidex:1.0.3'
+}
+

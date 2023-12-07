@@ -41,33 +41,36 @@ class _HitungImtState extends State<HitungImt> {
           title: 'Hitung IMT',
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          FormHitung(
-              controller: data.weightController,
-              keyboard: TextInputType.number,
-              hintText: 'Berat Badan',
-              labelText: 'Masukan Berat Badan'),
-          const SizedBox(height: 30),
-          FormHitung(
-              controller: data.heightController,
-              keyboard: TextInputType.number,
-              hintText: 'Tinggi Badan',
-              labelText: 'Masukan Tinggi Badan'),
-          const SizedBox(height: 30),
-          Hitung(
-            onpressedHitung: () {
-              calculateIMT();
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const HasilIMT()));
-              debugPrint(' Print dari Hitung');
-            },
-            onpressedReset: () {
-              resetValues();
-              debugPrint(' Print dari reset');
-            },
-          )
-        ],
+      body: Container(
+        padding: EdgeInsets.all(30),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FormHitung(
+                controller: data.weightController,
+                keyboard: TextInputType.number,
+                hintText: 'Berat Badan',
+                labelText: 'Masukan Berat Badan'),
+            const SizedBox(height: 30),
+            FormHitung(
+                controller: data.heightController,
+                keyboard: TextInputType.number,
+                hintText: 'Tinggi Badan',
+                labelText: 'Masukan Tinggi Badan'),
+            const SizedBox(height: 30),
+            Hitung(
+              onpressedHitung: () {
+                calculateIMT();
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const HasilIMT()));
+                debugPrint(' Print dari Hitung');
+              },
+              onpressedReset: () {
+                resetValues();
+                debugPrint(' Print dari reset');
+              },
+            )
+          ],
+        ),
       ),
     );
   }
