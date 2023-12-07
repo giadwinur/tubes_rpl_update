@@ -41,7 +41,7 @@ class HasilZscore extends StatelessWidget {
                   const Text(
                     '\nKategori:',
                     style: TextStyle(
-                      // fontSize: 20.0,
+                      fontSize: 17.0,
                       fontWeight: FontWeight.bold,
                       color: Color.fromRGBO(106, 129, 222, 1),
                     ),

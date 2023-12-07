@@ -1,7 +1,7 @@
-import 'package:tubes_rpl_update/be/models.dart';
-import 'package:tubes_rpl_update/be/xtra/prov.dart';
+import 'package:tubes_rpl_update/backend_berita/xtra/prov.dart';
 import 'package:tubes_rpl_update/config/xtras.dart';
 
+import '../model.dart';
 import 'repo.dart';
 
 final sv = Serv();

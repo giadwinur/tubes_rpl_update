@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tubes_rpl_update/dashboard/cekstun/imt/controller_imt.dart';
 
 // ignore: must_be_immutable
 class HasilComp extends StatelessWidget {
@@ -32,11 +33,7 @@ class HasilComp extends StatelessWidget {
           ),
           Text(
             hasil,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 35,
-              color: Color.fromRGBO(106, 129, 222, 1),
-            ),
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35, color: ctrlImt.getColorForResult()),
           ),
         ],
       ),

@@ -28,7 +28,22 @@ class HasilAkg extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Kamu Membutuhkan : ${dataAkg.result.toStringAsFixed(2)}, Per-Hari'),
+                Text(
+                  'Kamu Membutuhkan : ${dataAkg.result.toStringAsFixed(2)}, Kalori/Hari',
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                    '\nAngka Kecukupan Gizi (AKG) adalah suatu nilai yang menunjukkan kebutuhan rata-rata zat gizi tertentu yang harus dipenuhi setiap hari bagi hampir semua orang dengan karakteristik tertentu untuk hidup sehat \n\nKalori adalah jumlah energi yang diperoleh dari makanan dan minuman. Penting bagi setiap orang untuk memenuhi kebutuhan kalori hariannya guna memperoleh energi untuk melakukan aktivitas sepanjang hari. Perlu diketahui, kebutuhan kalori setiap orang berbeda-beda tergantung dari usia, jenis kelamin dan kondisi tertentu.\n\njumlah energi Kalori dalam makanan dan minuman ini berasal dari aneka nutrisi di dalamnya, seperti karbohidrat, protein, dan lemak. Setiap nutrisi memiliki jumlah kalori yang berbeda,'),
+                SizedBox(height: 20),
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Lihat nutrisi....',
+                    style: TextStyle(
+                      color: const Color.fromRGBO(106, 129, 222, 1),
+                    ),
+                  ),
+                )
               ],
             ),
           ),

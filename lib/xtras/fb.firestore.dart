@@ -24,15 +24,18 @@ class FbFirestore {
   //* read multiple items
   Future<dynamic> readCollection({
     required String colId,
-    required int limit,
+    // required int limit,
     required String lastCreateTime,
   }) async {
     try {
       return Future.value(
         instance
             .collection(colId)
-            .limit(limit)
-            .orderBy('created_at', descending: true)
+            // .limit(limit)
+            .orderBy(
+              'created_at',
+              descending: true,
+            )
             .startAfter([lastCreateTime]).get(),
       );
     } catch (e) {

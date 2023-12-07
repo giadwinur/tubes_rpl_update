@@ -1,6 +1,6 @@
-import 'package:tubes_rpl_update/be/data.dart';
-import 'package:tubes_rpl_update/be/models.dart';
-import 'package:tubes_rpl_update/be/xtra/serv.dart';
+import 'package:tubes_rpl_update/backend_berita/data.dart';
+import 'package:tubes_rpl_update/backend_berita/model.dart';
+import 'package:tubes_rpl_update/backend_berita/xtra/serv.dart';
 import 'package:tubes_rpl_update/config/_index.dart';
 import 'package:uuid/uuid.dart';
 

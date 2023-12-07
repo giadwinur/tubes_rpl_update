@@ -6,6 +6,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(theme: ThemeData(fontFamily: 'Rubik'), home: const NavBar());
+    return MaterialApp(debugShowCheckedModeBanner: false, theme: ThemeData(fontFamily: 'Rubik'), home: const NavBar());
   }
 }
